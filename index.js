@@ -16,6 +16,7 @@ function changeColor(element){
 
 let colorBtns = document.querySelectorAll(".btn-color");
 
+/*Add event listener to all color buttons*/
 colorBtns.forEach(element => {
     console.log(element)
     element.addEventListener('click', function(){
@@ -61,3 +62,12 @@ function stop(event){
     }
     event.preventDefault();
 }
+
+/* Function to clear Canvas*/
+let clearBtn = document.getElementById('new');
+
+clearBtn.addEventListener('click', function(){
+    context.fillStyle = "white";
+    context.clearRect(0,0,canvas.width, canvas.height);
+    context.fillRect(0,0,canvas.width,canvas.height);
+})
