@@ -78,3 +78,14 @@ let eraseBtn = document.getElementById('erase');
 eraseBtn.addEventListener('click', function(){
     drawColor = "white";
 })
+
+/*Automatic value for width slider and event listener*/
+let widthRangeSlider = document.querySelector('#slider');
+document.addEventListener("DOMContentLoaded", function(){
+    widthRangeSlider.value =widthRangeSlider.min;
+    drawWidth = widthRangeSlider.value;
+})
+
+widthRangeSlider.addEventListener('input', function(){
+    drawWidth = this.value;
+})
