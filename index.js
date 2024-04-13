@@ -71,3 +71,10 @@ clearBtn.addEventListener('click', function(){
     context.clearRect(0,0,canvas.width, canvas.height);
     context.fillRect(0,0,canvas.width,canvas.height);
 })
+
+/* Functionality to erase button*/
+let eraseBtn = document.getElementById('erase');
+
+eraseBtn.addEventListener('click', function(){
+    drawColor = "white";
+})
