@@ -36,14 +36,14 @@ canvas.addEventListener('mouseout', stop, false);
 function start(e){
     isDrawing = true;
     context.beginPath();
-    context.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+    context.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop + window.scrollY);
     e.preventDefault();
 }
 
 /*Function to draw when mouse move */
 function draw(e){
     if(isDrawing){
-        context.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+        context.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop + window.scrollY);
         context.strokeStyle = drawColor;
         context.lineWidth = drawWidth;
         context.lineCap = "round";
